@@ -171,6 +171,9 @@ call plug#begin(stdpath('config').'/plugged')
     "--- Code Productivity -------------------
     Plug 'tpope/vim-commentary'
 
+    "--- Code Intellisense -------------------
+    Plug 'williamboman/mason.nvim'
+
 call plug#end()
 
 
@@ -198,5 +201,9 @@ augroup END
 
 "--- Other Settings -------------------------
 for setting_file in split(glob(stdpath('config').'/settings/*.vim'))
+  execute 'source' setting_file
+endfor
+
+for setting_file in split(glob(stdpath('config').'/settings/*.lua'))
   execute 'source' setting_file
 endfor
