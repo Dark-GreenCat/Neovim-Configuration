@@ -9,6 +9,7 @@ syntax on
 " Basic settings
 set mouse=a                 " Enable mouse
 set tabstop=4
+set softtabstop=4
 set shiftwidth=4
 set expandtab
 set listchars=tab:\¦\       " Tab charactor 
