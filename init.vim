@@ -23,6 +23,7 @@ set ignorecase              " Enable case-sensitive
 set cursorline              " Highlight line of cursor
 set nobomb                  
 set nomodeline
+set noshowmode
 
 " Disable backup
 set nobackup
@@ -73,9 +74,9 @@ nnoremap <M-Down> :resize +1<CR>
 nnoremap <M-Up> :resize -1<CR>
 
 " Resize font
-nnoremap <C-=> :call AdjustFontSize(1)<CR>
-nnoremap <C--> :call AdjustFontSize(-1)<CR>
-nnoremap <C-0> :call AdjustFontSize(0)<CR>
+nnoremap <M-=> :call AdjustFontSize(1)<CR>
+nnoremap <M--> :call AdjustFontSize(-1)<CR>
+nnoremap <M-0> :call AdjustFontSize(0)<CR>
 
 let s:fontsize = 11
 function! AdjustFontSize(amount)
@@ -147,6 +148,10 @@ call plug#begin(stdpath('config').'/plugged')
     Plug 'joshdick/onedark.vim'
     Plug 'ghifarit53/tokyonight-vim'
     Plug 'drewtempelmeyer/palenight.vim'
+
+    "--- Statusline --------------------------
+    Plug 'itchyny/lightline.vim'
+    Plug 'mengelbrecht/lightline-bufferline'
 
     "--- File Browser -----------------------
     Plug 'lambdalisue/fern.vim'
