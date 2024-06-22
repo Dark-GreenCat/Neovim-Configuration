@@ -6,3 +6,12 @@ call plug#begin(stdpath('config').'/plugged')
     Plug 'drewtempelmeyer/palenight.vim'
 
 call plug#end()
+
+
+"--- Config UI Themes -----------------------
+if (has("termguicolors"))
+ set termguicolors
+endif
+
+set background=dark
+colorscheme tokyonight
