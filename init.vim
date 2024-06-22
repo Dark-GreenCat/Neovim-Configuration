@@ -165,6 +165,9 @@ call plug#begin(stdpath('config').'/plugged')
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
 
+    "--- Git Inside Vim ----------------------
+    Plug 'tpope/vim-fugitive'
+
 call plug#end()
 
 
