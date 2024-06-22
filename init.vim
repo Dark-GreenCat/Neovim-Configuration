@@ -96,6 +96,21 @@ inoremap <C-V> <ESC><ESC>p<ESC>a
 " Return to normal mode from terminal mode
 tnoremap <leader><ESC> <C-\><C-n>
 
+" Split panel
+nnoremap <leader>v <C-w>v
+nnoremap <leader>s <C-w>s
+
+" Line moving
+" " Normal mode
+nnoremap <C-j> :m .+1<CR>==
+nnoremap <C-k> :m .-2<CR>==
+" " Insert mode
+inoremap <C-j> <ESC>:m .+1<CR>==gi
+inoremap <C-k> <ESC>:m .-2<CR>==gi
+" " Visual mode
+vnoremap <C-j> :m '>+1<CR>gv=gv
+vnoremap <C-k> :m '<-2<CR>gv=gv
+
 " Switch buffer
 noremap <C-TAB> :bn<CR>
 noremap <C-S-TAB> :bp<CR>
