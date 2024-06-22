@@ -148,6 +148,14 @@ call plug#begin(stdpath('config').'/plugged')
     Plug 'ghifarit53/tokyonight-vim'
     Plug 'drewtempelmeyer/palenight.vim'
 
+    "--- File Browser -----------------------
+    Plug 'lambdalisue/fern.vim'
+    Plug 'lambdalisue/fern-git-status.vim'
+    Plug 'lambdalisue/glyph-palette.vim'
+    Plug 'lambdalisue/nerdfont.vim'
+    Plug 'lambdalisue/fern-renderer-nerdfont.vim'
+    Plug 'lambdalisue/fern-hijack.vim'
+
 call plug#end()
 
 
@@ -161,3 +169,13 @@ let g:tokyonight_style = 'storm'                " Available: night, storm
 let g:tokyonight_enable_italic = 0
 let g:tokyonight_disable_italic_comment = 0
 colorscheme tokyonight
+
+
+"--- Config File Browser --------------------
+let g:fern#renderer = "nerdfont"
+
+augroup my-glyph-palette
+  autocmd! *
+  autocmd FileType fern call glyph_palette#apply()
+  autocmd FileType nerdtree,startify call glyph_palette#apply()
+augroup END
