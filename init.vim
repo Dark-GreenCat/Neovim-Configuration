@@ -141,4 +141,7 @@ if (has("termguicolors"))
 endif
 
 set background=dark
+let g:tokyonight_style = 'storm'                " Available: night, storm
+let g:tokyonight_enable_italic = 0
+let g:tokyonight_disable_italic_comment = 0
 colorscheme tokyonight
