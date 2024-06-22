@@ -156,6 +156,10 @@ call plug#begin(stdpath('config').'/plugged')
     Plug 'lambdalisue/fern-renderer-nerdfont.vim'
     Plug 'lambdalisue/fern-hijack.vim'
 
+    "--- File Search -------------------------
+    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+    Plug 'junegunn/fzf.vim'
+
 call plug#end()
 
 
