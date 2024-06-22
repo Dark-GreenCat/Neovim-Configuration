@@ -168,6 +168,9 @@ call plug#begin(stdpath('config').'/plugged')
     "--- Git Inside Vim ----------------------
     Plug 'tpope/vim-fugitive'
 
+    "--- Code Productivity -------------------
+    Plug 'tpope/vim-commentary'
+
 call plug#end()
 
 
