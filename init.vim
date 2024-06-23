@@ -173,6 +173,7 @@ call plug#begin(stdpath('config').'/plugged')
 
     "--- Code Intellisense -------------------
     Plug 'williamboman/mason.nvim'
+    Plug 'williamboman/mason-lspconfig.nvim'
     Plug 'neovim/nvim-lspconfig'
 
 call plug#end()
