@@ -175,6 +175,8 @@ call plug#begin(stdpath('config').'/plugged')
     Plug 'williamboman/mason.nvim'
     Plug 'williamboman/mason-lspconfig.nvim'
     Plug 'neovim/nvim-lspconfig'
+    Plug 'nvim-lua/plenary.nvim'
+    Plug 'nvimtools/none-ls.nvim'
 
 call plug#end()
 
