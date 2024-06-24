@@ -201,6 +201,9 @@ call plug#begin(stdpath('config').'/plugged')
     Plug 'hrsh7th/cmp-cmdline'
     Plug 'hrsh7th/nvim-cmp'
 
+    "--- Debugger -----------------------------
+    Plug 'puremourning/vimspector'
+
     " For vsnip users.
     Plug 'hrsh7th/cmp-vsnip'
     Plug 'hrsh7th/vim-vsnip'
@@ -209,7 +212,7 @@ call plug#begin(stdpath('config').'/plugged')
     Plug 'voldikss/vim-floaterm'
 
 call plug#end()
-
+let g:vimspector_enable_mappings = 'HUMAN'
 
 "--- Config UI Themes -----------------------
 if (has("termguicolors"))
