@@ -35,6 +35,16 @@ let g:lightline#bufferline#icon_position = 'first'
 let g:lightline#bufferline#shorten_path = 0
 let g:lightline#bufferline#unnamed = '[No Name]'
 
+nmap <M-1> <Plug>lightline#bufferline#go(1)
+nmap <M-2> <Plug>lightline#bufferline#go(2)
+nmap <M-3> <Plug>lightline#bufferline#go(3)
+nmap <M-4> <Plug>lightline#bufferline#go(4)
+nmap <M-5> <Plug>lightline#bufferline#go(5)
+nmap <M-6> <Plug>lightline#bufferline#go(6)
+nmap <M-7> <Plug>lightline#bufferline#go(7)
+nmap <M-8> <Plug>lightline#bufferline#go(8)
+nmap <M-9> <Plug>lightline#bufferline#go(9)
+
 nmap <Leader>bl <Plug>lightline#bufferline#move_next()
 nmap <Leader>bh <Plug>lightline#bufferline#move_previous()
 nmap <Leader>bk <Plug>lightline#bufferline#move_first()

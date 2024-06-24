@@ -103,15 +103,24 @@ nnoremap <leader>v <C-w>v
 nnoremap <leader>s <C-w>s
 
 " Line moving
-" " Normal mode
-nnoremap <C-j> :m .+1<CR>==
-nnoremap <C-k> :m .-2<CR>==
-" " Insert mode
-inoremap <C-j> <ESC>:m .+1<CR>==gi
-inoremap <C-k> <ESC>:m .-2<CR>==gi
-" " Visual mode
-vnoremap <C-j> :m '>+1<CR>gv=gv
-vnoremap <C-k> :m '<-2<CR>gv=gv
+nnoremap <M-j> :m .+1<CR>==
+nnoremap <M-k> :m .-2<CR>==
+
+inoremap <M-j> <ESC>:m .+1<CR>==gi
+inoremap <M-k> <ESC>:m .-2<CR>==gi
+
+vnoremap <M-j> :m '>+1<CR>gv=gv
+vnoremap <M-k> :m '<-2<CR>gv=gv
+
+" Line duplicating
+nnoremap <M-S-j> yyp
+nnoremap <M-S-k> yyP
+
+inoremap <M-S-j> <ESC>yypgi
+inoremap <M-S-k> <ESC>yyPgi
+
+vnoremap <M-S-j> y`]pgv
+vnoremap <M-S-k> y`]pgv
 
 " Switch buffer
 noremap <C-TAB> :bn<CR>
@@ -133,6 +142,16 @@ nnoremap <C-Right> <C-w>l
 nnoremap <C-Left> <C-w>h
 nnoremap <C-Up> <C-w>k
 nnoremap <C-Down> <C-w>j
+
+inoremap <C-Right> <ESC><C-w>l<ESC>a
+inoremap <C-Left> <ESC><C-w>h<ESC>a
+inoremap <C-Up> <ESC><C-w>k<ESC>a
+inoremap <C-Down> <ESC><C-w>j<ESC>a
+
+tnoremap <C-Right> <C-\><C-n><C-w>l
+tnoremap <C-Left> <C-\><C-n><C-w>h
+tnoremap <C-Up> <C-\><C-n><C-w>k
+tnoremap <C-Down> <C-\><C-n><C-w>j
 
 
 
@@ -175,8 +194,6 @@ call plug#begin(stdpath('config').'/plugged')
     Plug 'williamboman/mason.nvim'
     Plug 'williamboman/mason-lspconfig.nvim'
     Plug 'neovim/nvim-lspconfig'
-    Plug 'nvim-lua/plenary.nvim'
-    Plug 'nvimtools/none-ls.nvim'
     Plug 'hrsh7th/cmp-nvim-lsp'
     Plug 'hrsh7th/cmp-buffer'
     Plug 'hrsh7th/cmp-path'
@@ -195,7 +212,7 @@ if (has("termguicolors"))
  set termguicolors
 endif
 
-set background=dark
+" set background=dark
 let g:tokyonight_style = 'storm'                " Available: night, storm
 let g:tokyonight_enable_italic = 0
 let g:tokyonight_disable_italic_comment = 0
