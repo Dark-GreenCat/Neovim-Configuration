@@ -204,6 +204,9 @@ call plug#begin(stdpath('config').'/plugged')
     Plug 'hrsh7th/cmp-vsnip'
     Plug 'hrsh7th/vim-vsnip'
 
+    "--- Inside Terminal ----------------------
+    Plug 'voldikss/vim-floaterm'
+
 call plug#end()
 
 
