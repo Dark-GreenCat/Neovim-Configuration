@@ -189,6 +189,7 @@ call plug#begin(stdpath('config').'/plugged')
 
     "--- Code Productivity -------------------
     Plug 'tpope/vim-commentary'
+    Plug 'cohama/lexima.vim'        " Auto close parentheses and repeat by dot dot dot...
 
     "--- Code Intellisense -------------------
     Plug 'williamboman/mason.nvim'
