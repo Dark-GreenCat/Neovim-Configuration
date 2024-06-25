@@ -212,6 +212,10 @@ call plug#begin(stdpath('config').'/plugged')
     "--- Inside Terminal ----------------------
     Plug 'voldikss/vim-floaterm'
 
+    "--- Startup Screen -----------------------
+    " Plug 'mhinz/vim-startify'
+    Plug 'echasnovski/mini.nvim', { 'branch': 'stable' }
+
 call plug#end()
 
 
@@ -248,3 +252,9 @@ endfor
 for setting_file in split(glob(stdpath('config').'/settings/*.lua'))
   execute 'source' setting_file
 endfor
+
+"--- Startup Configuaration ------------------
+augroup my-nvim-startup
+  autocmd! *
+  autocmd VimEnter * ++nested Fern ~/ -drawer -stay -keep
+augroup END

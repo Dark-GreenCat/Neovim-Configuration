@@ -12,14 +12,6 @@ function! s:smart_path() abort
   return fnamemodify(expand('%'), ':p:h')
 endfunction
 
-
-" Start fern.vim on Vim startup with a particular directory
-augroup my-fern-startup
-  autocmd! *
-  autocmd VimEnter * ++nested Fern ~/ -drawer -keep
-augroup END
-
-
 " Quick expand/collapse/enter directory with key
 function! s:init_fern() abort
   nmap <buffer><expr>
