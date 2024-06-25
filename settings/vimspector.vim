@@ -1,5 +1,10 @@
 let g:vimspector_enable_mappings = 'HUMAN'
 
+" More verbose display for variables and watches
+let g:vimspector_variables_display_mode = 'full'
+
+" Automatic hovering popup 
+let g:vimspector_enable_auto_hover=1
 
 " mnemonic 'di' = 'debug inspect' (pick your own, if you prefer!)
 
