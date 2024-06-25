@@ -78,10 +78,10 @@ nnoremap <M-=> :call AdjustFontSize(1)<CR>
 nnoremap <M--> :call AdjustFontSize(-1)<CR>
 nnoremap <M-0> :call AdjustFontSize(0)<CR>
 
-let s:fontsize = 11
+let s:fontsize = 10
 function! AdjustFontSize(amount)
   if a:amount == 0
-      let s:fontsize = 11
+      let s:fontsize = 10
   else
       let s:fontsize = s:fontsize+a:amount
   endif
