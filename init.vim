@@ -212,8 +212,7 @@ call plug#begin(stdpath('config').'/plugged')
     "--- Inside Terminal ----------------------
     Plug 'voldikss/vim-floaterm'
 
-    "--- Startup Screen -----------------------
-    " Plug 'mhinz/vim-startify'
+    "--- Fast Neovim Setup --------------------
     Plug 'echasnovski/mini.nvim', { 'branch': 'stable' }
 
 call plug#end()
