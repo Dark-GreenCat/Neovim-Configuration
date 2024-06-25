@@ -8,6 +8,34 @@ require('lspconfig')['clangd'].setup {
 -- lua <<EOF
 -- Set up nvim-cmp.
 local cmp = require'cmp'
+local kind_icons = {
+    Text = "󰦨",
+    Method = "",
+    Function = "",
+    Constructor = "",
+    Field = "",
+    Variable = "",
+    Class = "",
+    Interface = "",
+    Module = "",
+    Property = "",
+    Snippet = "",
+    Unit = "",
+    Value = "",
+    Enum = "",
+    Keyword = "",
+    Color = "",
+    File = "",
+    Reference = "",
+    Folder = "",
+    EnumMember = "",
+    Constant = "",
+    Struct = "",
+    Event = "",
+    Operator = "",
+    TypeParameter = "",
+    Copilot = "",
+}
 
 vim.opt.completeopt = "menu,menuone,noselect"
 
@@ -43,7 +71,26 @@ cmp.setup({
         { name = 'vsnip' }, -- For vsnip users.
     }, {
         { name = 'buffer' },
-    })
+    }),
+    view = {
+        entries = { name = "custom", selection_order = "near_cursor" },
+    },
+    formatting = {
+        format = function(entry, vim_item)
+            -- Kind icons
+            vim_item.kind = string.format("%s %s", kind_icons[vim_item.kind], vim_item.kind) -- This concatonates the icons with the name of the item kind
+            -- Source
+            vim_item.menu = ({
+                buffer = "[Buffer]",
+                nvim_lsp = "[LSP]",
+                luasnip = "[LuaSnip]",
+                nvim_lua = "[Lua]",
+                latex_symbols = "[LaTeX]",
+                -- copilot = "[Copilot]",
+            })[entry.source.name]
+            return vim_item
+        end,
+    },
 })
 
 -- Use buffer source for `/` and `?` (if you enabled `native_menu`, this won't work anymore).
