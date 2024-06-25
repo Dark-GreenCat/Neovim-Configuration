@@ -212,7 +212,7 @@ call plug#begin(stdpath('config').'/plugged')
     Plug 'voldikss/vim-floaterm'
 
 call plug#end()
-let g:vimspector_enable_mappings = 'HUMAN'
+
 
 "--- Config UI Themes -----------------------
 if (has("termguicolors"))
