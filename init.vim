@@ -60,6 +60,9 @@ autocmd FileChangedShellPost *
     \ | echo "File changed on disk. Buffer reloaded."
     \ | echohl None
 
+" Set indentation for specific filetype
+autocmd FileType vim,lua setlocal shiftwidth=2 softtabstop=2 expandtab
+
 
 
 
