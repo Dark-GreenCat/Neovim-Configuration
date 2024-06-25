@@ -200,6 +200,7 @@ call plug#begin(stdpath('config').'/plugged')
     Plug 'hrsh7th/cmp-path'
     Plug 'hrsh7th/cmp-cmdline'
     Plug 'hrsh7th/nvim-cmp'
+    Plug 'ray-x/lsp_signature.nvim'
 
     "--- Debugger -----------------------------
     Plug 'puremourning/vimspector'
@@ -225,6 +226,9 @@ let g:tokyonight_enable_italic = 0
 let g:tokyonight_disable_italic_comment = 0
 colorscheme tokyonight
 
+" neovim (lsp) diagnostics
+hi FloatBorder guibg=#24283b guifg=#8087a6
+hi NormalFloat guibg=#24283b
 
 "--- Config File Browser --------------------
 let g:fern#renderer = "nerdfont"
