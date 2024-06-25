@@ -1,7 +1,7 @@
 " Togglederderderderderderder>f>f>f>f>f>f>f Fern
-nnoremap <silent> <Leader>t :cd <C-r>=<SID>smart_path()<CR><CR>:Fern . -drawer -toggle -stay -keep<CR>
+nnoremap <silent> <C-t> :cd <C-r>=<SID>smart_path()<CR><CR>:Fern . -drawer -toggle -stay -keep<CR>
 " Find current files in Fern
-nnoremap <silent> <Leader>f :cd <C-r>=<SID>smart_path()<CR><CR>:Fern . -drawer -stay -keep<CR>
+nnoremap <silent> <C-f> :cd <C-r>=<SID>smart_path()<CR><CR>:Fern . -drawer -stay -keep<CR>
 
 " Return a parent directory of the current buffer when the buffer is a file.
 " Otherwise it returns a current working directory.
