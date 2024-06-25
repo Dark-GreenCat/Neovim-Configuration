@@ -6,5 +6,5 @@
 " Format key: gq
 augroup c_cpp_indentation
     autocmd!
-    autocmd FileType c,cpp,h,hpp setlocal formatprg=clangformat
+    autocmd FileType c,cpp,h,hpp setlocal formatprg=clang-format
 augroup END
