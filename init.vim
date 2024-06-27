@@ -190,6 +190,7 @@ call plug#begin(stdpath('config').'/plugged')
 
     "--- Git Inside Vim ----------------------
     Plug 'tpope/vim-fugitive'
+    Plug 'airblade/vim-gitgutter'
 
     "--- Code Productivity -------------------
     Plug 'tpope/vim-commentary'
