@@ -218,6 +218,7 @@ call plug#begin(stdpath('config').'/plugged')
 
     "--- Fast Neovim Setup --------------------
     Plug 'echasnovski/mini.nvim', { 'branch': 'stable' }
+    Plug '907th/vim-auto-save'
 
 call plug#end()
 
