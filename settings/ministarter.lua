@@ -57,5 +57,5 @@ hipatterns.setup({
     },
 })
 
-require('mini.notify').setup()
+-- require('mini.notify').setup()
 

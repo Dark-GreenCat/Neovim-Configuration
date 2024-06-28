@@ -47,13 +47,13 @@ cmp.setup({
         end,
     },
     window = {
-        completion = { 
-            border = "rounded", 
+        completion = {
+            border = "rounded",
             winhighlight = "Normal:Normal,FloatBorder:Normal,CursorLine:Visual,Search:None",
-        }, 
-        documentation = { 
-            border = "rounded", 
-            winhighlight = "Normal:Normal,FloatBorder:Normal,CursorLine:Visual,Search:None", 
+        },
+        documentation = {
+            border = "rounded",
+            winhighlight = "Normal:Normal,FloatBorder:Normal,CursorLine:Visual,Search:None",
         },
     },
     mapping = cmp.mapping.preset.insert({

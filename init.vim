@@ -24,6 +24,7 @@ set cursorline              " Highlight line of cursor
 set nobomb
 set nomodeline
 set noshowmode
+set termguicolors
 
 " Disable backup
 set nobackup
@@ -222,6 +223,7 @@ call plug#begin(stdpath('config').'/plugged')
 
     "--- Fast Neovim Setup --------------------
     Plug 'echasnovski/mini.nvim', { 'branch': 'stable' }
+    Plug 'rcarriga/nvim-notify'
     Plug '907th/vim-auto-save'
 
 call plug#end()
