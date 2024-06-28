@@ -12,16 +12,16 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set expandtab
-set listchars=tab:\¦\       " Tab charactor 
+set listchars=tab:\¦\       " Tab charactor
 set list
 set foldmethod=syntax
 set foldnestmax=1
-set foldlevelstart=0  
+set foldlevelstart=0
 set nofoldenable
 set number                  " Show line number
-set ignorecase              " Enable case-sensitive 
+set ignorecase              " Enable case-sensitive
 set cursorline              " Highlight line of cursor
-set nobomb                  
+set nobomb
 set nomodeline
 set noshowmode
 
@@ -30,7 +30,7 @@ set nobackup
 set nowb
 set noswapfile
 
-" Optimize 
+" Optimize
 set synmaxcol=512
 set lazyredraw
 
@@ -43,7 +43,7 @@ set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
 
 " Enable copying from vim to clipboard
 if has('win32')
-  set clipboard=unnamed  
+  set clipboard=unnamed
 else
   set clipboard=unnamedplus
 endif
@@ -53,10 +53,10 @@ au CursorHold,CursorHoldI * checktime
 au FocusGained,BufEnter * :checktime
 autocmd FocusGained,BufEnter,CursorHold,CursorHoldI *
     \ if mode() !~ '\v(c|r.?|!|t)' && getcmdwintype() == ''
-      \ | checktime 
+      \ | checktime
     \ | endif
 autocmd FileChangedShellPost *
-    \ echohl WarningMsg 
+    \ echohl WarningMsg
     \ | echo "File changed on disk. Buffer reloaded."
     \ | echohl None
 
@@ -71,7 +71,7 @@ autocmd FileType vim,lua setlocal shiftwidth=2 softtabstop=2 expandtab
 """""""""""""""""""""""""""""""""""""""""""""
 
 " Resize panel
-nnoremap <M-Right> :vertical resize +1<CR>    
+nnoremap <M-Right> :vertical resize +1<CR>
 nnoremap <M-Left> :vertical resize -1<CR>
 nnoremap <M-Down> :resize +1<CR>
 nnoremap <M-Up> :resize -1<CR>
@@ -94,7 +94,7 @@ endfunction
 " Paste yanked text in command mode
 cnoremap <C-S-v> <C-r><S-">
 " Paste from system clipboard in command mode
-cnoremap <C-V> <C-R>+ 
+cnoremap <C-V> <C-R>+
 " Paste from system clipboard in insert mode
 inoremap <C-V> <ESC><ESC>p<ESC>a
 
@@ -196,6 +196,7 @@ call plug#begin(stdpath('config').'/plugged')
     Plug 'tpope/vim-commentary'
     Plug 'cohama/lexima.vim'        " Auto close parentheses and repeat by dot dot dot...
     Plug 'ntpeters/vim-better-whitespace'     " Highlight trailling whitespace
+    Plug 'lambdalisue/battery.vim'
 
     "--- Code Intellisense -------------------
     Plug 'williamboman/mason.nvim'
