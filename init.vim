@@ -25,6 +25,7 @@ set nobomb
 set nomodeline
 set noshowmode
 set termguicolors
+set inccommand=split
 
 " Disable backup
 set nobackup
@@ -210,6 +211,7 @@ call plug#begin(stdpath('config').'/plugged')
     Plug 'hrsh7th/cmp-cmdline'
     Plug 'hrsh7th/nvim-cmp'
     Plug 'ray-x/lsp_signature.nvim'
+    Plug 'smjonas/inc-rename.nvim'
 
     "--- Debugger -----------------------------
     Plug 'puremourning/vimspector'
