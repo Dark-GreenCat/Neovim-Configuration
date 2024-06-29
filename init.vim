@@ -195,6 +195,9 @@ call plug#begin(stdpath('config').'/plugged')
     Plug 'rbong/vim-flog'
     Plug 'airblade/vim-gitgutter'
 
+    "--- Code Syntax Highlight ---------------
+    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
     "--- Code Productivity -------------------
     Plug 'tpope/vim-commentary'
     Plug 'cohama/lexima.vim'        " Auto close parentheses and repeat by dot dot dot...
