@@ -213,6 +213,9 @@ call plug#begin(stdpath('config').'/plugged')
     Plug 'ray-x/lsp_signature.nvim'
     Plug 'smjonas/inc-rename.nvim'
 
+    "--- Markdown -----------------------------
+    Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+
     "--- Debugger -----------------------------
     Plug 'puremourning/vimspector'
 
