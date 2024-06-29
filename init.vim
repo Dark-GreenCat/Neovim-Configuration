@@ -227,6 +227,7 @@ call plug#begin(stdpath('config').'/plugged')
     Plug 'echasnovski/mini.nvim', { 'branch': 'stable' }
     Plug 'rcarriga/nvim-notify'
     Plug '907th/vim-auto-save'
+    Plug 'j-hui/fidget.nvim'
 
 call plug#end()
 
