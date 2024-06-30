@@ -189,6 +189,8 @@ call plug#begin(stdpath('config').'/plugged')
     "--- File Search -------------------------
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
+    Plug 'nvim-lua/plenary.nvim'
+    Plug 'nvim-telescope/telescope.nvim', { 'branch': '0.1.x' }
 
     "--- Git Inside Vim ----------------------
     Plug 'tpope/vim-fugitive'
