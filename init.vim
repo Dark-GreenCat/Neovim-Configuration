@@ -217,6 +217,7 @@ call plug#begin(stdpath('config').'/plugged')
     Plug 'hrsh7th/nvim-cmp'
     Plug 'ray-x/lsp_signature.nvim'
     Plug 'smjonas/inc-rename.nvim'
+    Plug 'rmagatti/goto-preview'
 
     "--- Markdown -----------------------------
     Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
