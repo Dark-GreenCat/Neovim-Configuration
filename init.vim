@@ -237,6 +237,7 @@ call plug#begin(stdpath('config').'/plugged')
     Plug 'rcarriga/nvim-notify'
     Plug '907th/vim-auto-save'
     Plug 'j-hui/fidget.nvim'
+    Plug 'yegappan/mru'
 
 call plug#end()
 
