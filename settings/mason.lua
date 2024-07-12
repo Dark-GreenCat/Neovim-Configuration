@@ -27,3 +27,5 @@ require("mason-lspconfig").setup_handlers {
 }
 
 -- require'lspconfig'.clangd.setup{}
+
+vim.keymap.set('n', '<leader>c', '<Cmd>ClangdSwitchSourceHeader<CR>', { silent = false })

@@ -72,4 +72,5 @@ hipatterns.setup({
 })
 
 -- require('mini.notify').setup()
-
+--
+vim.keymap.set('n', '<leader>w', '<Cmd>lua MiniSessions.write()<CR>', {silent = false })
