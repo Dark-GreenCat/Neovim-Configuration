@@ -72,6 +72,9 @@ autocmd FileType vim,lua setlocal shiftwidth=2 softtabstop=2 expandtab
 "-------------- KEY MAPPINGS ---------------"
 """""""""""""""""""""""""""""""""""""""""""""
 
+" Quit Vim
+nnoremap <leader>q :qa<CR>
+
 " Resize panel
 nnoremap <M-Right> :vertical resize +1<CR>
 nnoremap <M-Left> :vertical resize -1<CR>
